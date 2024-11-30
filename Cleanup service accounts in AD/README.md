@@ -4,7 +4,8 @@ A service account in Active Directory (AD) is a type of account created to run a
 
 ## Types of service accounts
 
-**Standard User Accounts:** Regular user accounts in AD that are used as service accounts (not recommended due to manual password management and security concerns). This is the most common thing that you will be seeing in organizations.
+**Standard User Accounts:** 
+- Regular user accounts in AD that are used as service accounts (not recommended due to manual password management and security concerns). This is the most common thing that you will be seeing in organizations.
    
 **Managed Service Accounts (MSAs):**
 - Automatically manage passwords.
