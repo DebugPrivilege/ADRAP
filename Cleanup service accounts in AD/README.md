@@ -50,8 +50,15 @@ Get-ServiceAccountDetails -ServiceAccountPrefix "svc_" -CsvOutput C:\Temp\Result
 
 ![image](https://github.com/user-attachments/assets/1feea511-8348-4aaf-88c5-75d970133914)
 
-5. The `lastLogon` attribute is precise but only reflects activity on a single domain controller, while `lastLogonTimestamp` is replicated across all DCs but may be outdated due to replication delays, which makes neither fully reliable for real-time logon tracking.
 
-If both the `lastLogon` and `lastLogonTimestamp` attributes are set to **Never**, it indicates that the account has never been used to log in since it was created. This could be a quick-win to cleanup those accounts first.
+## Best Practices
+
+If both the `lastLogon` and `lastLogonTimestamp` attributes are set to **Never**, it indicates that the account has never been used to log in since it was created. Cleaning up these accounts can improve security and reduce attack surface.
 
 ![image](https://github.com/user-attachments/assets/6f391e57-4c65-4291-9171-2f03415fa0ed)
+
+If the `lastLogon` attribute is **1-1-1601** and the `lastLogonTimestamp` is **Never**, it suggests the same as the previous examples. These accounts are unused and can be cleaned up to minimize the attack surface.
+
+1. Disable the accounts rather than deleting them immediately.
+2. Set a review period, wait a few days, and monitor for any potential issues (though they are unlikely).
+3. Document the actions, recording the steps taken and the decisions made during the cleanup process.
