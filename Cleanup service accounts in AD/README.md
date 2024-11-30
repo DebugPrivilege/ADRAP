@@ -35,3 +35,5 @@ Import-Module .\GetServiceAccountDetails.ps1
 ```
 Get-ServiceAccountDetails -ServiceAccountPrefix "svc_"
 ```
+
+![image](https://github.com/user-attachments/assets/ef0e11d7-626f-40d6-8f26-1e385b3769ec)
