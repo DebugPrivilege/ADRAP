@@ -16,3 +16,15 @@ A practical first step to mitigating Kerberoastable accounts, beyond enforcing s
 ![image](https://github.com/user-attachments/assets/8bd43d80-aea4-4655-a781-e831b461a822)
 
 3. Once we have a list of all accounts with SPNs, we should prioritize accounts whose passwords haven't been rotated for an extended period, such as several years or even decades. These accounts should be addressed first to improve security, as it's very likely that they have a weak password.
+
+When we specify the `-Identity` parameter, the script retrieves detailed information about the specified user's SPNs, password last set time, and recent logon activity, and performs checks on associated servers for existence in AD and connectivity.
+
+```
+.\ManageSPN.ps1 -Identity SVC_SCCM
+```
+
+![image](https://github.com/user-attachments/assets/e9225816-e742-43e2-920f-02c66c0e5381)
+
+
+
+
