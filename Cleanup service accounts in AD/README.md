@@ -17,3 +17,5 @@ A service account in Active Directory (AD) is a type of account created to run a
 
 **Built-in Accounts:**
 - Accounts like `LocalSystem`, `NetworkService`, and `LocalService` on Windows systems, used for running services without creating new accounts in AD.
+
+## Remediation
