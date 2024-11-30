@@ -2,6 +2,8 @@
 
 Kerberoasting is an attack technique that targets the `servicePrincipalName` (SPN) attribute in Active Directory, which is used to associate service accounts with specific services. Attackers request Kerberos service tickets for accounts with SPNs, extract these tickets (encrypted with the service account's password hash), and attempt to crack them offline. If successful, they gain access to the service account, especially if the account has a weak or poorly managed password.
 
+A practical first step to mitigating Kerberoastable accounts, beyond enforcing strong passwords on SPN accounts or using gMSAs, is to review all accounts with an SPN and verify whether the server referenced in the SPN is still active. A common scenario is discovering that the server where the service account was used has already been decommissioned, yet the service account remains enabled in Active Directory.
+
 ## Remediation
 
 We will be using the ManagedSPN.ps1 script to help manage and analyze Service Principal Names (SPNs) in Active Directory. When you use the `-Identity` parameter, it fetches details about the specified user, including when their password was last set, their last logon times, and the SPNs associated with the account. 
@@ -9,8 +11,6 @@ We will be using the ManagedSPN.ps1 script to help manage and analyze Service Pr
 If you use `-RemoveAllSPN` or `-RemoveSPN`, the script removes either all or a specific SPN from the account. For each SPN, it extracts the server name, constructs a fully qualified domain name (FQDN) if necessary, and checks whether the server exists as a computer object in AD. It also tests the server's connectivity using `Test-NetConnection`, optionally checking a specified port. The results are displayed in a table showing the SPNs, server details, AD presence, and connectivity status. 
 
 If you run the script with `-Kerberoast`, it lists all enabled accounts with SPNs, along with their `pwdLastSet` and `servicePrincipalName`, to help identify accounts that are be vulnerable to Kerberoasting. You can download the script here: https://gist.github.com/DebugPrivilege/ac668b894d26371723d669fdbfe50673
-
-A practical first step to mitigating Kerberoastable accounts, beyond enforcing strong passwords on SPN accounts or using gMSAs, is to review all accounts with an SPN and verify whether the server referenced in the SPN is still active. A common scenario is discovering that the server where the service account was used has already been decommissioned, yet the service account remains enabled in Active Directory.
 
 1. Before getting started, make sure you run the script on a domain-joined machine with the Active Directory PowerShell module installed.
 2. We can run the `ManageSPN.ps1` script with the `-Kerberoast` parameter to list enabled user accounts that have an SPN, along with their `pwdLastSet` and `servicePrincipalName` attributes.
