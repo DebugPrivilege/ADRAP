@@ -37,3 +37,11 @@ Get-ServiceAccountDetails -ServiceAccountPrefix "svc_"
 ```
 
 ![image](https://github.com/user-attachments/assets/ef0e11d7-626f-40d6-8f26-1e385b3769ec)
+
+3. You can also use the `-CsvOutput` parameter to specify a file path where the results will be saved in .CSV format. This file can later be opened with tools like Timeline Explorer for further analysis.
+
+```
+Get-ServiceAccountDetails -ServiceAccountPrefix "svc_" -CsvOutput C:\Temp\Results.csv
+```
+
+![image](https://github.com/user-attachments/assets/0d9fd147-b2db-4773-bf9b-99ea6a84dd8e)
