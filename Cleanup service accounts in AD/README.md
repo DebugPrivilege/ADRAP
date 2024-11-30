@@ -21,3 +21,11 @@ A service account in Active Directory (AD) is a type of account created to run a
 ## Remediation
 
 This section will focus exclusively on remediating service accounts. Identifying whether a service account is still in use can be challenging without centralized logs to track its activity. However, we can address at minimum the stale service accounts that were created in the past but were never actively used. The following PowerShell script can be used to track down service accounts: https://gist.github.com/DebugPrivilege/bfe313a90e84fbf9d5d2d70d53db59c4
+
+1. Download the script and execute it on a domain-joined machine. Start by importing the script using the command:
+
+```
+Import-Module .\GetServiceAccountDetails.ps1
+```
+
+![image](https://github.com/user-attachments/assets/3cdd3b81-0e39-4836-becf-cebbc4d946e9)
