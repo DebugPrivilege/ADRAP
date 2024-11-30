@@ -31,3 +31,7 @@ Import-Module .\GetServiceAccountDetails.ps1
 ![image](https://github.com/user-attachments/assets/3cdd3b81-0e39-4836-becf-cebbc4d946e9)
 
 2. You can now invoke the `Get-ServiceAccountDetails` function, which includes the `-ServiceAccountPrefix` parameter. Use this to specify the prefix used for your service accounts (e.g., `svc_`, `sa_`, `srvc_`, `svc-`, etc.).
+
+```
+Get-ServiceAccountDetails -ServiceAccountPrefix "svc_"
+```
