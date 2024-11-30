@@ -45,3 +45,7 @@ Get-ServiceAccountDetails -ServiceAccountPrefix "svc_" -CsvOutput C:\Temp\Result
 ```
 
 ![image](https://github.com/user-attachments/assets/0d9fd147-b2db-4773-bf9b-99ea6a84dd8e)
+
+4. Open the CSV file with a tool like Timeline Explorer for further analysis
+
+![image](https://github.com/user-attachments/assets/1feea511-8348-4aaf-88c5-75d970133914)
