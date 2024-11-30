@@ -16,3 +16,5 @@ A practical first step to mitigating Kerberoastable accounts, beyond enforcing s
 ![image](https://github.com/user-attachments/assets/a8bc7dc5-1575-4179-883e-3e9d25da1aa0)
 
 2. When you use the `-Kerberoast` parameter, it functions similarly but also includes the `pwdLastSet` and `servicePrincipalName` attributes in the output.
+
+![image](https://github.com/user-attachments/assets/4d3ea850-ac71-47df-93a1-f6cde565258c)
