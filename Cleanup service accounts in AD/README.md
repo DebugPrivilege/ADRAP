@@ -49,3 +49,5 @@ Get-ServiceAccountDetails -ServiceAccountPrefix "svc_" -CsvOutput C:\Temp\Result
 4. Open the CSV file with a tool like Timeline Explorer for further analysis
 
 ![image](https://github.com/user-attachments/assets/1feea511-8348-4aaf-88c5-75d970133914)
+
+5. The `lastLogon` attribute is precise but only reflects activity on a single domain controller, while `lastLogonTimestamp` is replicated across all DCs but may be outdated due to replication delays, which makes neither fully reliable for real-time logon tracking.
