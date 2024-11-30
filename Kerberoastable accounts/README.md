@@ -9,6 +9,10 @@ A practical first step to mitigating Kerberoastable accounts, beyond enforcing s
 1. Before getting started, make sure you run the script on a domain-joined machine with the Active Directory PowerShell module installed.
 2. We can run the `ManageSPN.ps1` script with the `-Kerberoast` parameter to list enabled user accounts that have an SPN, along with their `pwdLastSet` and `servicePrincipalName` attributes.
 
+```
+.\ManageSPN.ps1 -Kerberoast
+```
+
 ![image](https://github.com/user-attachments/assets/8bd43d80-aea4-4655-a781-e831b461a822)
 
 3. Once we have a list of all accounts with SPNs, we should prioritize accounts whose passwords haven't been rotated for an extended period, such as several years or even decades. These accounts should be addressed first to improve security, as it's very likely that they have a weak password.
