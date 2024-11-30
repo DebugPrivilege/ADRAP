@@ -6,7 +6,7 @@ A practical first step to mitigating Kerberoastable accounts, beyond enforcing s
 
 ## Remediation
 
-We will be using the ManagedSPN.ps1 script to help manage and analyze Service Principal Names (SPNs) in Active Directory. When you use the `-Identity` parameter, it fetches details about the specified user, including when their password was last set, their last logon times, and the SPNs associated with the account. 
+We will be using the `ManagedSPN.ps1` script to help manage and analyze Service Principal Names (SPNs) in Active Directory. When you use the `-Identity` parameter, it fetches details about the specified user, including when their password was last set, their last logon times, and the SPNs associated with the account. 
 
 If you use `-RemoveAllSPN` or `-RemoveSPN`, the script removes either all or a specific SPN from the account. For each SPN, it extracts the server name, constructs a fully qualified domain name (FQDN) if necessary, and checks whether the server exists as a computer object in AD. It also tests the server's connectivity using `Test-NetConnection`, optionally checking a specified port. The results are displayed in a table showing the SPNs, server details, AD presence, and connectivity status. 
 
