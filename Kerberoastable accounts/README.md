@@ -25,6 +25,16 @@ When we specify the `-Identity` parameter, the script retrieves detailed informa
 
 ![image](https://github.com/user-attachments/assets/e9225816-e742-43e2-920f-02c66c0e5381)
 
+4. From the results, we can observe that the account has two SPNs. The output indicates that name resolution failed, and the associated computer object no longer exists in AD. This suggests it is safe to remove these SPNs, reset the account's password, and subsequently disable it. We can now use the `-RemoveAllSPN` parameter to remove all SPNs associated with this account, which mitigates the Kerberoasting attack.
+
+```
+.\ManageSPN.ps1 -Identity svc_sccm -RemoveAllSPN
+```
+
+![image](https://github.com/user-attachments/assets/d6273cd6-068e-4590-8ee9-cf34a7b3cd42)
+
+
+
 
 
 
