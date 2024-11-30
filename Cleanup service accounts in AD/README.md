@@ -51,3 +51,7 @@ Get-ServiceAccountDetails -ServiceAccountPrefix "svc_" -CsvOutput C:\Temp\Result
 ![image](https://github.com/user-attachments/assets/1feea511-8348-4aaf-88c5-75d970133914)
 
 5. The `lastLogon` attribute is precise but only reflects activity on a single domain controller, while `lastLogonTimestamp` is replicated across all DCs but may be outdated due to replication delays, which makes neither fully reliable for real-time logon tracking.
+
+If both the `lastLogon` and `lastLogonTimestamp` attributes are set to **Never**, it indicates that the account has never been used to log in since it was created. This could be a quick-win to cleanup those accounts first.
+
+![image](https://github.com/user-attachments/assets/6f391e57-4c65-4291-9171-2f03415fa0ed)
