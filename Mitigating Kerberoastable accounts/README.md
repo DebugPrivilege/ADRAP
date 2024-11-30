@@ -39,6 +39,13 @@ When we specify the `-Identity` parameter, the script retrieves detailed informa
 
 ![image](https://github.com/user-attachments/assets/d6273cd6-068e-4590-8ee9-cf34a7b3cd42)
 
+## Best Practices
+
+1. Start with accounts whose passwords haven't been rotated for a long time. First, check if the server linked to the SPN for the account is still active. If the server has already been decommissioned, it’s safe to remove the SPN and disable the account.
+2. If you come across any "human" accounts with an SPN, that’s a misconfiguration and should be addressed immediately. The SPN must be removed from such accounts.
+3. If the server does exist, but the account associated with an SPN for that server has never logged in, this is a strong indication that the account can be disabled. Additionally, if the `lastLogon` attribute has no value and the `lastLogonTimestamp` is set to a default date like `12/31/1600 4:00:00 PM`, it’s safe to disable the account as it appears unused.
+
+![image](https://github.com/user-attachments/assets/02c9f16f-233c-4d3a-af69-cce9e7371527)
 
 
 
