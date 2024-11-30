@@ -59,6 +59,8 @@ If both the `lastLogon` and `lastLogonTimestamp` attributes are set to **Never**
 
 If the `lastLogon` attribute is **1-1-1601** and the `lastLogonTimestamp` is **Never**, it suggests the same as the previous example. These accounts are unused and can be cleaned up to minimize the attack surface.
 
+![image](https://github.com/user-attachments/assets/b14e7175-6230-4f9a-8edc-26911317d2c3)
+
 1. Disable the accounts rather than deleting them immediately.
 2. Set a review period, wait a few days, and monitor for any potential issues (though they are unlikely).
 3. Document the actions, recording the steps taken and the decisions made during the cleanup process.
