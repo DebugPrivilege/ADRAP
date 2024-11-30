@@ -16,5 +16,8 @@ When running `adprep /domainprep` on Windows Server 2016, an unintended access c
 
 ![image](https://github.com/user-attachments/assets/cb934883-facc-4d46-9c2d-97d6bb01c737)
 
-4. Now, let’s confirm that the **GenericAll** permission has been removed from the **Enterprise Key Admins** group on the **Domain Naming Context**.
+4. Now, let’s confirm that the **GenericAll** permission has been removed from the **Enterprise Key Admins** group on the **Domain Naming Context**. It should now have been successfully removed:
+
+![image](https://github.com/user-attachments/assets/4a71263f-5448-4d59-af74-1a0dde52d05c)
+
 
