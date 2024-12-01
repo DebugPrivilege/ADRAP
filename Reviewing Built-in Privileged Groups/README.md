@@ -12,3 +12,11 @@ This PowerShell script helps administrators find and manage Tier 0 groups and us
 ```
 
 ![image](https://github.com/user-attachments/assets/d4d21813-4f4d-40b9-b531-25749f2be44c)
+
+## Best Practices
+
+For every account, ask:
+- Why is it a member of this group?
+- What tasks does it need to perform?
+- Can those tasks be performed with lower privileges through delegation?
+
